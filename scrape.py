@@ -1,34 +1,10 @@
 import bs4 as bs
 import urllib.request
 
-class Text:
-    """
-    This is an object made up of paragraphs scraped from a specified page from the Latin Library.
-    Maybe this shouldn't be a class but just a single function.
+def get_paragraphs(source):
+        """ Using beautiful soup, scrape the paragraphs from a specified page """
 
-    ...
-
-    Attributes
-    ----------
-
-    source : string
-        The url for a specific work by a particular author on the Latin Library
-
-    Methods
-    -------
-
-    make_text():
-        return a list of paragraphs from the specified source
-
-    """
-
-    def __init__(self,source):
-        self.source = source
-
-    def make_text(self):
-        """ Using beautiful soup, scrape the paragraphs from a page """
-
-        soup = bs.BeautifulSoup(self.source,'lxml')
+        soup = bs.BeautifulSoup(source,'lxml')
 
         paragraphs = []
 
@@ -39,7 +15,6 @@ class Text:
 
 if __name__ == "__main__":
     source = urllib.request.urlopen('http://www.thelatinlibrary.com/cicero/arch.shtml').read()
-    proArchia = Text(source)
-    paragraphs = proArchia.make_text()
+    paragraphs = get_paragraphs(source)
     for paragraph in paragraphs:
         print(paragraph)
