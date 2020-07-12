@@ -1,8 +1,10 @@
 import bs4 as bs
 import urllib.request
 
-def get_paragraphs(source):
+def get_paragraphs(url):
         """ Using beautiful soup, scrape the paragraphs from a specified page """
+
+        source = urllib.request.urlopen(url).read()
 
         soup = bs.BeautifulSoup(source,'lxml')
 
