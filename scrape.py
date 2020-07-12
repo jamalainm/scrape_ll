@@ -3,7 +3,8 @@ import urllib.request
 
 class Text:
     """
-    This is an object made up of paragraphs scraped from a specified page from the Latin Library
+    This is an object made up of paragraphs scraped from a specified page from the Latin Library.
+    Maybe this shouldn't be a class but just a single function.
 
     ...
 
