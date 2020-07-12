@@ -2,6 +2,7 @@ This will gather all <p> tags from a specified page and return a list of paragra
 
 Usage:
 
-<name> = Text(<html>) # Define your object
+<paragraphs> = make_text(<source>)
 
-<paragraphs = <name>.make_text()
+Where <paragraphs> is a variable name of your choosing;
+and <source> is a url of a page whose <p> strings you want.
