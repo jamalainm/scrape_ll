@@ -16,7 +16,7 @@ def get_paragraphs(url):
         return paragraphs
 
 if __name__ == "__main__":
-    source = urllib.request.urlopen('http://www.thelatinlibrary.com/cicero/arch.shtml').read()
+    url = 'http://www.thelatinlibrary.com/cicero/arch.shtml'
     paragraphs = get_paragraphs(source)
     for paragraph in paragraphs:
         print(paragraph)
